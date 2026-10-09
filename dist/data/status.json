@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "program": "Miles&Smiles",
+  "verifiedAt": "2026-10-09",
+  "sources": {
+    "status": {
+      "title": "Miles&Smiles Üyelik Statüleri",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/uyelik-statuleri/"
+    },
+    "terms": {
+      "title": "Miles&Smiles Kurallar ve Koşullar",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/kurallar-ve-kosullar/"
+    },
+    "statusPurchase": {
+      "title": "Statü Mil Satın Alma",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-uygulamalari/statu-mil-satin-alma/"
+    },
+    "statusConversion": {
+      "title": "Mil dönüştürme",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-uygulamalari/mil-donusturme/"
+    }
+  },
+  "tiers": [
+    {
+      "id": "classic",
+      "label": "Classic",
+      "rank": 0,
+      "starAlliance": null,
+      "validity": "lifetime",
+      "promotion": null,
+      "renewal": null
+    },
+    {
+      "id": "classicPlus",
+      "label": "Classic Plus",
+      "rank": 1,
+      "starAlliance": "Silver",
+      "validity": "2_years_month_end",
+      "promotion": { "miles": 25000, "flights": 40, "logic": "OR", "window": "rolling12Months", "source": "status" },
+      "renewal": {
+        "Turkey": { "year1": { "miles": 17000, "flights": 30, "logic": "OR" }, "year2": { "miles": 35000, "flights": 60, "logic": "OR" } },
+        "abroad": { "year1": { "miles": 17000, "flights": 30, "logic": "OR" }, "year2": { "miles": 35000, "flights": 60, "logic": "OR" } },
+        "logicBetweenPeriods": "OR",
+        "source": "status"
+      }
+    },
+    {
+      "id": "elite",
+      "label": "Elite",
+      "rank": 2,
+      "starAlliance": "Gold",
+      "validity": "2_years_month_end",
+      "promotion": { "miles": 40000, "flights": null, "window": "rolling12Months", "source": "status" },
+      "renewal": {
+        "Turkey": { "year1": { "miles": 30000, "flights": null }, "year2": { "miles": 45000, "flights": null } },
+        "abroad": { "year1": { "miles": 25000, "flights": null }, "year2": { "miles": 37500, "flights": null } },
+        "logicBetweenPeriods": "OR",
+        "source": "status"
+      }
+    },
+    {
+      "id": "elitePlus",
+      "label": "Elite Plus",
+      "rank": 3,
+      "starAlliance": "Gold",
+      "validity": "2_years_month_end",
+      "promotion": { "miles": 80000, "flights": null, "window": "rolling12Months", "source": "status" },
+      "renewal": {
+        "Turkey": { "year1": { "miles": 40000, "flights": null }, "year2": { "miles": 60000, "flights": null } },
+        "abroad": { "year1": { "miles": 40000, "flights": null }, "year2": { "miles": 60000, "flights": null } },
+        "logicBetweenPeriods": "OR",
+        "source": "status"
+      }
+    }
+  ],
+  "periods": {
+    "rolling12Months": { "calendarMonths": 12, "updates": "daily", "source": "status" },
+    "year1": { "type": "fixed", "start": "currentStatusStartDate", "end": "officialFirstPeriodEndDate", "source": "status" },
+    "year2": { "type": "fixed", "start": "currentStatusStartDate", "end": "currentStatusEndDate", "includesFirstYear": true, "source": "status" },
+    "renewalStarts": "day_after_current_status_end",
+    "excessMilesCarryIntoNextRenewalPeriod": false,
+    "newlyPromotedStatusEndFormula": "last_day_of_month(add_calendar_years(statusStartDate, 2))",
+    "renewedStatusEndFormula": "last_day_of_month(add_calendar_years(previousStatusEndDate, 2))"
+  },
+  "eligibility": {
+    "promotionAndRenewalUse": "statusMiles",
+    "flightCountUse": "eligiblePaidFlights",
+    "awardTicketsCountAsPaidFlights": false,
+    "awardFlightsEarnStatusMiles": false,
+    "charterFlightsEarnStatusMiles": false,
+    "ordinaryBonusMilesQualifyForStatus": false,
+    "eligibleFlightOperators": "THY and Miles&Smiles airline partners, subject to operating airline and booking class rules",
+    "actualQualificationRequiresCompletedCreditedActivity": true,
+    "source": "terms",
+    "flightCountSource": "status"
+  },
+  "statusPurchase": {
+    "source": "statusPurchase",
+    "blockMiles": 1000,
+    "pricePerBlockUSD": 70,
+    "taxIncluded": true,
+    "spendableMilesAdded": 0,
+    "paidFlightsAdded": 0,
+    "renewalPurchaseAfterFirstPeriodOnly": true,
+    "publishedAdditional12MonthLimit": 10000,
+    "maxShortfallByCurrentTier": {
+      "classic": { "promotion": 5000, "renewal": null },
+      "classicPlus": { "promotion": 10000, "renewal": 5000 },
+      "elite": { "promotion": 10000, "renewal": 10000 },
+      "elitePlus": { "promotion": null, "renewal": 10000 }
+    },
+    "mode": "information_only_require_account_eligibility_confirmation"
+  },
+  "statusConversion": {
+    "source": "statusConversion",
+    "spendableMilesDebitedPerStatusMile": 5,
+    "maxStatusMilesInPrevious12Months": 40000,
+    "eligibleOrigin": "eligible active Miles&Smiles co-branded credit/debit card spend",
+    "eligibleCardBankCountries": ["TR", "US", "DE", "AZ", "JO", "IQ", "GE"],
+    "advanceOrConditionalMilesEligible": false,
+    "addsToStatusQualification": true,
+    "paidFlightsAdded": 0,
+    "mode": "information_only_require_eligible_card_miles_confirmation"
+  },
+  "recordSchema": {
+    "id": "unique_activity_id",
+    "activityDate": "YYYY-MM-DD",
+    "creditedDate": "YYYY-MM-DD or null",
+    "state": "credited | completed_uncredited | planned | cancelled",
+    "kind": "paid_flight | award_flight | status_purchase | card_conversion | bonus",
+    "statusMiles": "non-negative integer, separate from spendable balance",
+    "redeemableMiles": "integer credit or debit",
+    "eligiblePaidFlights": "0 or number confirmed by account",
+    "source": "account_actual | manual_estimate",
+    "operator": "airline code or null",
+    "bookingClass": "letter or null"
+  },
+  "implementationNotes": [
+    "Year2 means the entire current two-year status period, never just its second year. Compare year1 OR year2; freeze the first-period total after its deadline.",
+    "Use the dates and totals displayed by the Miles&Smiles account when available. Store officialFirstPeriodEndDate explicitly; do not derive renewal dates from calendar-year boundaries. Initial promotion expiry and renewed-cycle expiry use different formulas.",
+    "For an upgrade projection at a future flight date, recompute the rolling 12-month window at that future date so older entries fall out. Do not add planned miles to today's rolling total without aging it.",
+    "Show current credited totals separately from planned forecasts. Cancelled records count zero; completed but uncredited flights do not count as already qualified.",
+    "Do not downgrade a currently valid tier because its rolling 12-month total is lower today. The rolling counter answers upgrade eligibility only.",
+    "Residence affects Elite renewal only in this data. Ask Turkey/abroad explicitly; nationality is a different field.",
+    "Do not turn every paid flight into an eligible flight count. Record an explicit confirmed eligiblePaidFlights value, or label the result as an estimate.",
+    "Do not add statusMiles and redeemableMiles together. Flights may credit both counters, status purchases credit only status, and card conversions debit eligible spendable miles.",
+    "Store activityDate and creditedDate separately. The public sources do not settle every retroactive-credit and exact boundary-date case; prefer official account period totals there.",
+    "Purchase and conversion eligibility can depend on account history; present rules and estimates without promising that THY will accept a transaction."
+  ],
+  "unresolvedBoundaries": [
+    "The public page says preceding 12 months but does not specify inclusive/exclusive anniversary-day treatment. A day-based estimate may use (asOf minus 12 calendar months, asOf]; flag an activity exactly on that boundary.",
+    "The public page defines first period as the first year from status start, without an explicit boundary-day example. A fallback can use [start, add_calendar_years(start, 1)); label it estimated and allow officialFirstPeriodEndDate override.",
+    "Exact airline eligibility for Classic Plus flight counts is not enumerated on the public status page. Use confirmed account counts for certainty.",
+    "Do not promise a particular downgrade tier after failed renewal without verifying the member's account and relevant rule."
+  ],
+  "dateExamples": [
+    {
+      "case": "new_status_validity",
+      "statusStartDate": "2026-03-15",
+      "derivedStatusEndDate": "2028-03-31",
+      "estimatedFirstYearInterval": { "startInclusive": "2026-03-15", "endExclusive": "2027-03-15" },
+      "confirmedRenewalNextStart": "2028-04-01",
+      "confirmedRenewalNextEnd": "2030-03-31"
+    },
+    {
+      "case": "future_upgrade_window_expires_old_miles",
+      "asOf": "2026-10-09",
+      "records": [
+        { "id": "expired", "activityDate": "2025-10-08", "state": "credited", "kind": "paid_flight", "statusMiles": 5000, "eligiblePaidFlights": 1 },
+        { "id": "within", "activityDate": "2025-10-10", "state": "credited", "kind": "paid_flight", "statusMiles": 12000, "eligiblePaidFlights": 1 },
+        { "id": "recent", "activityDate": "2026-10-01", "state": "credited", "kind": "paid_flight", "statusMiles": 16000, "eligiblePaidFlights": 1 },
+        { "id": "planned", "activityDate": "2027-02-01", "state": "planned", "kind": "paid_flight", "statusMiles": 15000, "eligiblePaidFlights": 1 }
+      ],
+      "expectedCurrentRollingStatusMiles": 28000,
+      "forecastAsOf": "2027-02-01",
+      "expectedForecastRollingStatusMiles": 31000,
+      "expectedEliteUpgrade": false
+    },
+    {
+      "case": "fixed_renewal_entire_two_years",
+      "cycleOrigin": "renewed",
+      "tier": "elite",
+      "residence": "Turkey",
+      "statusStartDate": "2025-04-01",
+      "officialFirstPeriodEndDate": "2026-03-31",
+      "currentStatusEndDate": "2027-03-31",
+      "firstPeriodStatusMiles": 28000,
+      "secondYearOnlyStatusMiles": 18000,
+      "entireTwoYearStatusMiles": 46000,
+      "year1ConditionMet": false,
+      "year2ConditionMet": true,
+      "renewalEligible": true,
+      "renewalStarts": "2027-04-01"
+    }
+  ]
+}

@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "program": "Miles&Smiles",
+  "carrier": "TK",
+  "metric": "flightStatusMiles",
+  "sourceUrl": "https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/turkish-airlines/",
+  "verifiedAt": "2026-10-09",
+  "additionalSources": [
+    {
+      "id": "terms",
+      "url": "https://www.turkishairlines.com/en-int/miles-and-smiles/terms-and-conditions/",
+      "supports": [
+        "IATA TPM distance basis",
+        "operating carrier controls codeshare accrual",
+        "award tickets do not earn",
+        "flight Status Miles can also be used for awards; Bonus Miles do not count for status"
+      ]
+    },
+    {
+      "id": "status-faq",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/uyelik-statuleri/",
+      "supports": [
+        "Business additional status accrual",
+        "upgrade rolling 12 months",
+        "renewal anchored status periods"
+      ]
+    },
+    {
+      "id": "earning-tr",
+      "url": "https://www.turkishairlines.com/tr-eg/miles-and-smiles/program-ortaklari/havayolu/turk-hava-yollari/",
+      "supports": [
+        "Turkish wording of fare table and example"
+      ]
+    }
+  ],
+  "eligibility": {
+    "operatingCarrier": "TK",
+    "paidTicket": true,
+    "cashAndMilesEarnsLikePaid": true,
+    "awardTicketEarnsMiles": false,
+    "charterEarnsMiles": false,
+    "codesharePolicy": "Use actual operating carrier rules. TK marketing flight number alone is insufficient.",
+    "unknownBookingClass": "unsupported; never map automatically from fare-brand or cabin"
+  },
+  "rules": [
+    {
+      "id": "economy-flex",
+      "bookingClasses": [
+        "Y",
+        "B"
+      ],
+      "cabin": "economy",
+      "domestic": {
+        "allTiers": {
+          "fixedMiles": 600
+        }
+      },
+      "international": {
+        "classic": {
+          "rate": 1.25,
+          "minimumMiles": 1250
+        },
+        "classicPlus": {
+          "rate": 1.25,
+          "minimumMiles": 1250
+        },
+        "elite": {
+          "rate": 1.25,
+          "minimumMiles": 1250
+        },
+        "elitePlus": {
+          "rate": 1.25,
+          "minimumMiles": 1250
+        }
+      }
+    },
+    {
+      "id": "economy-standard",
+      "bookingClasses": [
+        "M",
+        "H",
+        "S",
+        "E",
+        "Q",
+        "A",
+        "O"
+      ],
+      "cabin": "economy",
+      "domestic": {
+        "allTiers": {
+          "fixedMiles": 600
+        }
+      },
+      "international": {
+        "classic": {
+          "rate": 1,
+          "minimumMiles": 1000
+        },
+        "classicPlus": {
+          "rate": 1,
+          "minimumMiles": 1000
+        },
+        "elite": {
+          "rate": 1,
+          "minimumMiles": 1000
+        },
+        "elitePlus": {
+          "rate": 1,
+          "minimumMiles": 1000
+        }
+      }
+    },
+    {
+      "id": "economy-discount",
+      "bookingClasses": [
+        "T",
+        "L",
+        "V",
+        "G"
+      ],
+      "cabin": "economy",
+      "domestic": {
+        "allTiers": {
+          "fixedMiles": 300
+        }
+      },
+      "international": {
+        "classic": {
+          "rate": 0.5,
+          "minimumMiles": 500
+        },
+        "classicPlus": {
+          "rate": 0.5,
+          "minimumMiles": 500
+        },
+        "elite": {
+          "rate": 0.5,
+          "minimumMiles": 500
+        },
+        "elitePlus": {
+          "rate": 0.5,
+          "minimumMiles": 500
+        }
+      }
+    },
+    {
+      "id": "economy-low",
+      "bookingClasses": [
+        "W",
+        "P",
+        "F",
+        "U"
+      ],
+      "cabin": "economy",
+      "domestic": {
+        "allTiers": {
+          "fixedMiles": 150
+        }
+      },
+      "international": {
+        "classic": {
+          "rate": 0.25,
+          "minimumMiles": 250
+        },
+        "classicPlus": {
+          "rate": 0.25,
+          "minimumMiles": 250
+        },
+        "elite": {
+          "rate": 0.25,
+          "minimumMiles": 250
+        },
+        "elitePlus": {
+          "rate": 0.25,
+          "minimumMiles": 250
+        }
+      }
+    },
+    {
+      "id": "business-flex",
+      "bookingClasses": [
+        "C",
+        "D"
+      ],
+      "cabin": "business",
+      "domestic": {
+        "allTiers": {
+          "fixedMiles": 1250
+        }
+      },
+      "international": {
+        "classic": {
+          "rate": 1.5,
+          "minimumMiles": 1500
+        },
+        "classicPlus": {
+          "rate": 1.75,
+          "minimumMiles": 1750
+        },
+        "elite": {
+          "rate": 1.75,
+          "minimumMiles": 1750
+        },
+        "elitePlus": {
+          "rate": 1.75,
+          "minimumMiles": 1750
+        }
+      }
+    },
+    {
+      "id": "business-standard",
+      "bookingClasses": [
+        "K",
+        "J",
+        "Z"
+      ],
+      "cabin": "business",
+      "domestic": {
+        "allTiers": {
+          "fixedMiles": 1000
+        }
+      },
+      "international": {
+        "classic": {
+          "rate": 1.35,
+          "minimumMiles": 1350
+        },
+        "classicPlus": {
+          "rate": 1.6,
+          "minimumMiles": 1600
+        },
+        "elite": {
+          "rate": 1.6,
+          "minimumMiles": 1600
+        },
+        "elitePlus": {
+          "rate": 1.6,
+          "minimumMiles": 1600
+        }
+      }
+    }
+  ],
+  "calculation": {
+    "unit": "per flown segment",
+    "domesticFormula": "fixedMiles",
+    "internationalFormula": "max(distanceMiles * rate, minimumMiles)",
+    "distanceType": "IATA TPM (Ticketed Point Mileage)",
+    "distanceInput": "User-entered TPM or verified official calculation distance. Great-circle estimate must be labelled approximate and never represented as TPM.",
+    "rounding": "Official rounding was not specified in the reviewed sources. Preserve raw value; any integer display is an estimate.",
+    "tierBonus": "International Business Classic Plus/Elite/Elite Plus rates already include the additional 0.25 of distance. Do not multiply the result by 1.25 or add a second bonus. Domestic all-card fixed amounts stay as listed.",
+    "total": "Calculate segment by segment, then sum. Outbound and return may have different classes."
+  },
+  "outputPolicy": {
+    "recommendedLabelTr": "Tahmini uçuş / Statü Mili",
+    "statusValue": "The official table example explicitly describes Status Miles.",
+    "redeemableValue": "Flight Status Miles are also usable for awards according to program terms. Do not add this amount to redeemable Miles as a separate second earning. Additional promotional or account-specific Bonus Miles are not included.",
+    "accountBalance": "No balance sync or posting confirmation. Result is planning, not an account credit guarantee.",
+    "apiNeeded": "No API needed to apply the published fare-class table. API or manual official confirmation is required to verify real booking class, route TPM, account posting and current booking-specific earn amount."
+  },
+  "notesTr": [
+    "Rezervasyon sınıfı biletteki tek harfli koddur; EcoFly / ExtraFly / PrimeFly adı veya Economy / Business kabin adı tek başına yeterli değildir.",
+    "İç hat sabit kazanım için mesafe girişi gerekmez. Dış hat için hesap IATA TPM mesafesini esas alır.",
+    "Sonuç, 9 Ekim 2026 tarihinde doğrulanan tabloya göre planlama tahminidir. Kampanya ve hesaba özel bonuslar dahil değildir.",
+    "Tablo normal ücretli THY tarafından icra edilen uçuşlar içindir. Ödül bilet ve charter uçuş mil kazandırmaz; Cash&Miles ücretli bilet gibi kazanır."
+  ],
+  "officialExample": {
+    "tier": "elite",
+    "route": "IST–LAX",
+    "bookingClass": "K",
+    "distanceMiles": 6855,
+    "rate": 1.6,
+    "resultStatusMiles": 10968
+  }
+}

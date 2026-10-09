@@ -1,0 +1,15 @@
+{
+  "name": "mil-pusulasi",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Miles&Smiles ödül, mil kazanımı ve statü planlayıcısı",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "node --test",
+    "check": "node scripts/check.mjs"
+  }
+}
