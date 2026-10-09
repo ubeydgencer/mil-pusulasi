@@ -59,7 +59,7 @@ npm run check
 npm test
 ```
 
-11 anlamlı hesaplama senaryosu: resmi kazanım örneği, minimumlar, ödül bilet sıfır kazanımı, desteklenmeyen sınıf/taşıyıcı, kişi/yön çarpımı, kayan ileri dönem, koruma dönemleri, ikamet farkı ve artık yıl sınırı. GitHub Actions aynı kontrolleri çalıştırır.
+11 anlamlı hesaplama senaryosu: resmi kazanım örneği, minimumlar, ödül bilet sıfır kazanımı, desteklenmeyen sınıf/taşıyıcı, kişi/yön çarpımı, kayan ileri dönem, koruma dönemleri, ikamet farkı ve artık yıl sınırı.
 
 `dist/lib/miles.js` bağımsız hesaplama motorudur. Tarayıcı arayüzü `dist/app.js` ve `dist/styles.css` içindedir. Destekleyen tarayıcılarda iki WebMCP aracı aynı görünen hesaplayıcılara veri girer; rezervasyon veya hesap işlemi yapmaz.
 
