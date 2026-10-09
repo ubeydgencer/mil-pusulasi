@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "program": "Miles&Smiles",
+  "verifiedAt": "2026-10-09",
+  "carriers": [
+    {
+      "carrier": "LH",
+      "name": "Lufthansa",
+      "sourceUrl": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/program-ortaklari/havayolu/lufthansa/",
+      "verifiedAt": "2026-10-09",
+      "calculationMethod": "distanceRate",
+      "mileTypes": ["redeemable", "status"],
+      "excludedClasses": ["O", "I", "R", "X", "K", "L", "P"],
+      "planningEligibleFlights": 0,
+      "rules": [
+        {"bookingClasses": ["A", "F"], "cabin": "first", "rate": 2, "minimumMiles": 1600},
+        {"bookingClasses": ["C", "D", "J"], "cabin": "business", "rate": 1.5, "minimumMiles": 1200},
+        {"bookingClasses": ["Z"], "cabin": "business", "rate": 1.35, "minimumMiles": 1000},
+        {"bookingClasses": ["G", "E"], "cabin": "premiumEconomy", "rate": 1.25, "minimumMiles": 1000},
+        {"bookingClasses": ["N"], "cabin": "premiumEconomy", "rate": 1, "minimumMiles": 800},
+        {"bookingClasses": ["B", "Y"], "cabin": "economy", "rate": 1.25, "minimumMiles": 1000},
+        {"bookingClasses": ["H", "M", "U"], "cabin": "economy", "rate": 1, "minimumMiles": 800},
+        {"bookingClasses": ["Q", "S", "W", "V"], "cabin": "economy", "rate": 0.5, "minimumMiles": 400},
+        {"bookingClasses": ["T"], "cabin": "economy", "rate": 0.25, "minimumMiles": 200}
+      ]
+    },
+    {
+      "carrier": "UA",
+      "name": "United Airlines",
+      "sourceUrl": "https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/united-airlines/",
+      "verifiedAt": "2026-10-09",
+      "calculationMethod": "distanceRate",
+      "mileTypes": ["redeemable", "status"],
+      "excludedClasses": ["F", "X", "I"],
+      "planningEligibleFlights": 0,
+      "rules": [
+        {"bookingClasses": ["J", "C", "D"], "cabin": "business", "rate": 1.5, "minimumMiles": null},
+        {"bookingClasses": ["Z", "P"], "cabin": "business", "rate": 1, "minimumMiles": null},
+        {"bookingClasses": ["O", "A", "R"], "cabin": "premiumEconomy", "rate": 1, "minimumMiles": null},
+        {"bookingClasses": ["Y", "B", "M", "E", "U", "H"], "cabin": "economy", "rate": 1, "minimumMiles": null},
+        {"bookingClasses": ["Q", "V", "W", "S", "T", "L"], "cabin": "economy", "rate": 0.75, "minimumMiles": null},
+        {"bookingClasses": ["K", "G", "N"], "cabin": "economy", "rate": 0.5, "minimumMiles": null}
+      ],
+      "minimumPolicy": "Not specified in the published partner table. Estimate uses the published distance rate only."
+    }
+  ],
+  "scope": {
+    "supportedTicketTypes": ["paid", "award"],
+    "operatingCarrierRequired": true,
+    "codeshare": "Use the operating airline's booking class; a TK marketing flight number is insufficient.",
+    "regionalOperators": "United Express and Lufthansa regional affiliates are not automatically treated as UA or LH.",
+    "tierBonus": "No partner tier bonus is applied; Turkish Airlines Business tier rates are not transferred.",
+    "rounding": "Official rounding was not specified; integer display is a floor estimate.",
+    "flightCount": "Partner flights add estimated Status Miles only; eligible flight-count qualification is not assumed. Enter a count confirmed by the Miles&Smiles account separately.",
+    "availability": "Partner earning support does not add partner award prices or live availability."
+  }
+}

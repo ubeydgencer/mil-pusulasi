@@ -4,6 +4,8 @@ import {readFile} from 'node:fs/promises';
 import {awardCost,compareMiles,calculateEarn,rollingTotals,promotionProgress,renewalProgress,expiringRecords,parseDate,addMonths} from '../dist/lib/miles.js';
 const load=async name=>JSON.parse(await readFile(new URL(`../dist/data/${name}.json`,import.meta.url),'utf8'));
 const awards=await load('awards'),earning=await load('earning'),status=await load('status');
+const partners=await load('partners');
+const lh=partners.carriers.find(c=>c.carrier==='LH'),ua=partners.carriers.find(c=>c.carrier==='UA');
 const record=(date,miles,state='credited',flights=1)=>({id:date,date,statusMiles:miles,state,flights});
 test('official THY award prices include passengers and two directions',()=>{
   const europe=awards.regions.find(r=>r.id==='avrupa-2');
@@ -27,6 +29,39 @@ test('award tickets do not earn and unsupported carrier/class are rejected',()=>
   assert.equal(calculateEarn(earning,{ticketType:'award'}).eligibleFlights,0);
   assert.throws(()=>calculateEarn(earning,{operator:'LH',bookingClass:'K',distance:6855}));
   assert.throws(()=>calculateEarn(earning,{bookingClass:'X',distance:6855}));
+});
+test('Lufthansa applies its own rate, minimum and excluded classes',()=>{
+  assert.equal(calculateEarn(lh,{bookingClass:'Z',distance:1000}).miles,1350);
+  assert.equal(calculateEarn(lh,{bookingClass:'T',distance:400}).miles,200);
+  assert.equal(calculateEarn(lh,{bookingClass:'A',distance:400}).miles,1600);
+  const zero=calculateEarn(lh,{bookingClass:'P'});
+  assert.equal(zero.miles,0);assert.equal(zero.reason,'excluded_class');
+  assert.throws(()=>calculateEarn(lh,{bookingClass:'?',distance:1000}),/unsupported_class/);
+});
+test('United uses published distance rates without borrowing a THY minimum',()=>{
+  assert.equal(calculateEarn(ua,{bookingClass:'J',distance:1000}).miles,1500);
+  assert.equal(calculateEarn(ua,{bookingClass:'Q',distance:800}).miles,600);
+  const short=calculateEarn(ua,{bookingClass:'K',distance:100});
+  assert.equal(short.miles,50);assert.equal(short.minimumMiles,null);
+  assert.equal(calculateEarn(ua,{bookingClass:'O',distance:800}).cabin,'premiumEconomy');
+  assert.equal(calculateEarn(ua,{bookingClass:'X'}).miles,0);
+});
+test('partner earnings reject THY-only rules and do not add its tier bonus',()=>{
+  for(const table of [lh,ua]){
+    assert.equal(calculateEarn(table,{bookingClass:'C',tier:'elitePlus',distance:2000}).miles,3000);
+    assert.throws(()=>calculateEarn(table,{bookingClass:'C',routeType:'domestic',distance:2000}),/unsupported_earning/);
+    assert.throws(()=>calculateEarn(table,{bookingClass:'C',ticketType:'cashMiles',distance:2000}),/unsupported_earning/);
+    assert.throws(()=>calculateEarn(table,{bookingClass:'C',ticketType:'charter',distance:2000}),/unsupported_earning/);
+    assert.equal(calculateEarn(table,{ticketType:'award'}).miles,0);
+    assert.throws(()=>calculateEarn(table,{operator:'TK',bookingClass:'C',distance:2000}),/unsupported_carrier/);
+  }
+});
+test('partner plans do not automatically satisfy Classic Plus flight-count qualification',()=>{
+  const earned=calculateEarn(lh,{bookingClass:'T',distance:400});
+  assert.equal(earned.eligibleFlights,0);
+  const records=Array.from({length:40},()=>record('2026-11-01',earned.miles,'planned',earned.eligibleFlights));
+  const progress=promotionProgress(status,records,{target:'classicPlus',asOf:'2026-12-01',forecast:true});
+  assert.equal(progress.totals.miles,8000);assert.equal(progress.totals.flights,0);assert.equal(progress.achieved,false);
 });
 test('a future status forecast ages historical records instead of adding to today',()=>{
   const records=[record('2025-10-08',5000),record('2025-10-10',12000),record('2026-10-01',16000),record('2027-02-01',15000,'planned')];

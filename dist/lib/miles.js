@@ -22,14 +22,22 @@ export function compareMiles({ cashPrice, awardCash, miles }) {
   return { cashPrice:cash, awardCash:fees, miles:used, savings, valuePerMile:savings / used, percentSavings:savings / cash * 100 };
 }
 
-export function calculateEarn(data, { bookingClass, tier = 'classic', routeType = 'international', distance, ticketType = 'paid', operator = 'TK' }) {
-  if (operator !== 'TK') throw new Error('unsupported_carrier');
+export function calculateEarn(data, { bookingClass, tier = 'classic', routeType = 'international', distance, ticketType = 'paid', operator = data?.carrier || 'TK' }) {
+  if (!data || operator !== data.carrier || !['TK','LH','UA'].includes(operator)) throw new Error('unsupported_carrier');
   if (!['classic','classicPlus','elite','elitePlus'].includes(tier)) throw new Error('invalid_tier');
   if (!['domestic','international'].includes(routeType) || !['paid','award','charter','cashMiles'].includes(ticketType)) throw new Error('invalid_earning');
-  if (ticketType === 'award' || ticketType === 'charter') return { miles:0, rawMiles:0, rate:0, minimumMiles:0, fixed:false, cabin:null, eligibleFlights:0 };
+  if (operator !== 'TK' && (routeType !== 'international' || !['paid','award'].includes(ticketType))) throw new Error('unsupported_earning');
+  const zero=reason=>({miles:0,rawMiles:0,rate:0,minimumMiles:null,fixed:false,cabin:null,eligibleFlights:0,operator,reason});
+  if (ticketType === 'award' || ticketType === 'charter') return zero(ticketType);
   const code = String(bookingClass).trim().toUpperCase();
+  if (data.excludedClasses?.includes(code)) return zero('excluded_class');
   const rule = data.rules.find(r => r.bookingClasses.includes(code));
   if (!rule) throw new Error('unsupported_class');
+  if (data.calculationMethod === 'distanceRate') {
+    const tpm=number(distance,{min:1,max:20000});
+    const rawMiles=rule.minimumMiles===null?tpm*rule.rate:Math.max(tpm*rule.rate,rule.minimumMiles);
+    return {miles:Math.floor(rawMiles),rawMiles,rate:rule.rate,minimumMiles:rule.minimumMiles,distance:tpm,fixed:false,cabin:rule.cabin,eligibleFlights:data.planningEligibleFlights,operator};
+  }
   if (routeType === 'domestic') return { miles:rule.domestic.allTiers.fixedMiles, rawMiles:rule.domestic.allTiers.fixedMiles, rate:null, minimumMiles:null, fixed:true, cabin:rule.cabin, eligibleFlights:1 };
   const tpm = number(distance, {min:1, max:20000});
   const {rate, minimumMiles} = rule.international[tier];
