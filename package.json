@@ -5,11 +5,14 @@
   "type": "module",
   "description": "Miles&Smiles ödül, mil kazanımı ve statü planlayıcısı",
   "license": "MIT",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "start": "node scripts/serve.mjs",
     "test": "node --test",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "review:rules": "node scripts/review-rules.mjs"
   }
 }

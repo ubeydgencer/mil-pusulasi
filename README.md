@@ -42,7 +42,9 @@ Mevcut statü, düşük kayan toplam nedeniyle otomatik düşürülmez. Tahmini 
 
 ## Kaynaklar ve güncelleme
 
-Son doğrulama: **9 Ekim 2026**.
+Hesaplama verisi tarihi: **9 Ekim 2026**. İlk sürümlü tablo alanı incelemesi: **30 Ekim 2026** (7 kaynak, 198 alan; fark yok). Güncel tarih arayüzde kayıt üzerinden hesaplanır.
+
+[İnceleme yöntemi, kapsamı ve komutu](docs/reviews/README.md), [tarihli gözlemler](docs/reviews/2026-10-30-observations.json) ve [karşılaştırma raporu](docs/reviews/2026-10-30-report.json) depoda tutulur. Eksik/okunamayan kaynak başarılı sayılmaz; uygulama hesaplama verisini otomatik değiştirmez.
 
 - [THY ödül bilet tablosu](https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-harcama/ucusta-mil-harcama/odul-bilet/)
 - [THY uçuş mil kazanımı](https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/turkish-airlines/)

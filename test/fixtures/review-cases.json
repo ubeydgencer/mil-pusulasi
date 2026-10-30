@@ -1,0 +1,5 @@
+{
+  "changed": {"id":"LH","field":"row0.rate","unit":"rate","value":"201%"},
+  "unavailable": {"id":"UA","status":"unavailable","reason":"Official page could not be read (fixture timeout)."},
+  "missing": {"id":"status","field":"elite.promotion.miles"}
+}
