@@ -40,6 +40,14 @@ Statü için kullanıcı, hesabındaki statü dönem başlangıcını, ilk yıl 
 
 Mevcut statü, düşük kayan toplam nedeniyle otomatik düşürülmez. Tahmini eşik sağlanması, statünün THY tarafından verildiği anlamına gelmez. İşlenmiş tutarlar kullanıcı beyanıdır; uygun uçuş sayısını hesapta görünen değerle girin. Normal bonus/kart milleri statü değildir.
 
+## Çok etaplı kazanım
+
+Mil kazanımı ekranında **Çok etaplı yolculuk** seçeneğiyle en fazla 12 etap eklenebilir. Her etapta uçuş adı, tarihi, gerçek işleten, rezervasyon sınıfı ve bilet türü ayrıdır. Gereken etapta biletin IATA TPM mesafesini girin; uygulama haritadan mesafe üretmez. İşleten değişirse sınıf ve mesafe yeniden girilir.
+
+**Etapları hesapla** her uçuşu kendi tablosuyla hesaplar. Etap başına yuvarlanan tutarlar bir kez toplanır; Statü Mili ve harcanabilir mil aynı kazanımın ayrı sayaçlarıdır. Ödül, charter veya kazanım dışı etaplar sıfır gösterilir. Sıfır kazanımlı etaplar statü planına aktarılmaz. Pozitif etaplar kendi tarihleriyle planlanır; partnerler uygun uçuş sayısını artırmaz. Projeksiyon seçtiğiniz tarihe kadar olan kayıtları içerir.
+
+Taslak yalnız tarayıcıda saklanır. Her değişiklikten sonra yeniden hesaplama gerekir. Aktarım tamamlanınca taslak temizlenir; mevcut tek uçuş ve statü kayıtları korunur.
+
 ## Kaynaklar ve güncelleme
 
 Hesaplama verisi tarihi: **9 Ekim 2026**. İlk sürümlü tablo alanı incelemesi: **30 Ekim 2026** (7 kaynak, 198 alan; fark yok). Güncel tarih arayüzde kayıt üzerinden hesaplanır.

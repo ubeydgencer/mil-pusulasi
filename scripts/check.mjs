@@ -4,7 +4,7 @@ import {spawnSync} from 'node:child_process';
 import assert from 'node:assert/strict';
 const html=await readFile('dist/index.html','utf8');
 for(const asset of ['styles.css','app.js']){assert(html.includes(`./${asset}`));await readFile(`dist/${asset}`);}
-for(const file of ['dist/app.js','dist/lib/miles.js','dist/lib/reviews.js','scripts/review-rules.mjs','scripts/serve.mjs']){const r=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});if(r.status!==0)throw Error(r.stderr);}
+for(const file of ['dist/app.js','dist/lib/miles.js','dist/lib/itinerary.js','dist/lib/reviews.js','scripts/review-rules.mjs','scripts/serve.mjs']){const r=spawnSync(process.execPath,['--check',file],{encoding:'utf8'});if(r.status!==0)throw Error(r.stderr);}
 const datasets=Object.fromEntries(await Promise.all(['awards','earning','status','partners'].map(async k=>[k,JSON.parse(await readFile(`dist/data/${k}.json`,'utf8'))])));
 for(const json of Object.values(datasets))assert.match(json.verifiedAt,/^\d{4}-\d{2}-\d{2}$/);
 const history=JSON.parse(await readFile('dist/data/reviews.json','utf8'));
