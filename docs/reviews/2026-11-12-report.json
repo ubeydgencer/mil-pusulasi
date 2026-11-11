@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-12",
+  "reviewer": "Project maintenance review",
+  "result": "unchanged",
+  "sources": [
+    {
+      "id": "awards",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-harcama/ucusta-mil-harcama/odul-bilet/",
+      "scope": "12 Türkiye bağlantılı tek yön bölgesinin dört ödül fiyatı; ülke listeleri ve genel koşul metni kapsam dışı.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 48
+    },
+    {
+      "id": "TK",
+      "url": "https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/turkish-airlines/",
+      "scope": "THY rezervasyon sınıfları, iç hat sabitleri ve kart bazında dış hat oran/minimumları.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 60
+    },
+    {
+      "id": "status",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/uyelik-statuleri/",
+      "scope": "Classic Plus/Elite/Elite Plus yükseltme ve Türkiye/yurt dışı ilk yıl/tüm iki yıl koruma eşikleri; dönem sınır günü yorumu kapsam dışı.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 30
+    },
+    {
+      "id": "LH",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/program-ortaklari/havayolu/lufthansa/",
+      "scope": "LH sınıfları, oranları, yayımlanan minimumlar ve kazanım dışı sınıflar. UA null minimum, yayımlanmamış demektir; sıfır varsayılmaz.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 28
+    },
+    {
+      "id": "UA",
+      "url": "https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/united-airlines/",
+      "scope": "UA sınıfları, oranları, yayımlanan minimumlar ve kazanım dışı sınıflar. UA null minimum, yayımlanmamış demektir; sıfır varsayılmaz.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 19
+    },
+    {
+      "id": "statusPurchase",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-uygulamalari/statu-mil-satin-alma/",
+      "scope": "Satın alma blok tutarı/fiyatı, 12 aylık ek limit ve statü başına eksik mil sınırları; hesap uygunluğu kapsam dışı.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 11
+    },
+    {
+      "id": "statusConversion",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-uygulamalari/mil-donusturme/",
+      "scope": "Dönüştürme oranı ve 12 aylık üst sınır; kart/hesap uygunluğu kapsam dışı.",
+      "checkedAt": "2026-11-12",
+      "result": "unchanged",
+      "differences": [],
+      "comparedFields": 2
+    }
+  ]
+}

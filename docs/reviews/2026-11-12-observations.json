@@ -1,0 +1,1061 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-12",
+  "reviewer": "Project maintenance review",
+  "methodNote": "Independently transcribed official Turkish Airlines Miles&Smiles numeric/class fields on 12 November Istanbul time. Web retrieval may use cached content. Country lists, general terms, partner awards, upgrade awards and account-specific eligibility were outside the comparison.",
+  "sources": [
+    {
+      "id": "awards",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-harcama/ucusta-mil-harcama/odul-bilet/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "Türkiye bağlantılı THY ödül tablosu, 12 satır × dört fiyat; partner ve kabin yükseltme tablosu hariç.",
+      "fields": [
+        {
+          "key": "turkiye.promoEconomy",
+          "value": 4500,
+          "unit": "integer"
+        },
+        {
+          "key": "turkiye.promoBusiness",
+          "value": 10000,
+          "unit": "integer"
+        },
+        {
+          "key": "turkiye.standardEconomy",
+          "value": 8500,
+          "unit": "integer"
+        },
+        {
+          "key": "turkiye.standardBusiness",
+          "value": 15000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-1.promoEconomy",
+          "value": 10000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-1.promoBusiness",
+          "value": 20000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-1.standardEconomy",
+          "value": 15000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-1.standardBusiness",
+          "value": 30000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-2.promoEconomy",
+          "value": 15000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-2.promoBusiness",
+          "value": 25000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-2.standardEconomy",
+          "value": 20000,
+          "unit": "integer"
+        },
+        {
+          "key": "avrupa-2.standardBusiness",
+          "value": 40000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-asya.promoEconomy",
+          "value": 20000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-asya.promoBusiness",
+          "value": 35000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-asya.standardEconomy",
+          "value": 25000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-asya.standardBusiness",
+          "value": 50000,
+          "unit": "integer"
+        },
+        {
+          "key": "ortadogu.promoEconomy",
+          "value": 18000,
+          "unit": "integer"
+        },
+        {
+          "key": "ortadogu.promoBusiness",
+          "value": 28000,
+          "unit": "integer"
+        },
+        {
+          "key": "ortadogu.standardEconomy",
+          "value": 23000,
+          "unit": "integer"
+        },
+        {
+          "key": "ortadogu.standardBusiness",
+          "value": 45000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-afrika.promoEconomy",
+          "value": 20000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-afrika.promoBusiness",
+          "value": 40000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-afrika.standardEconomy",
+          "value": 35000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-afrika.standardBusiness",
+          "value": 55000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-afrika.promoEconomy",
+          "value": 25000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-afrika.promoBusiness",
+          "value": 60000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-afrika.standardEconomy",
+          "value": 55000,
+          "unit": "integer"
+        },
+        {
+          "key": "orta-afrika.standardBusiness",
+          "value": 110000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-afrika.promoEconomy",
+          "value": 35000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-afrika.promoBusiness",
+          "value": 75000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-afrika.standardEconomy",
+          "value": 70000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-afrika.standardBusiness",
+          "value": 150000,
+          "unit": "integer"
+        },
+        {
+          "key": "uzakdogu.promoEconomy",
+          "value": 35000,
+          "unit": "integer"
+        },
+        {
+          "key": "uzakdogu.promoBusiness",
+          "value": 65000,
+          "unit": "integer"
+        },
+        {
+          "key": "uzakdogu.standardEconomy",
+          "value": 55000,
+          "unit": "integer"
+        },
+        {
+          "key": "uzakdogu.standardBusiness",
+          "value": 140000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-amerika.promoEconomy",
+          "value": 40000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-amerika.promoBusiness",
+          "value": 65000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-amerika.standardEconomy",
+          "value": 55000,
+          "unit": "integer"
+        },
+        {
+          "key": "kuzey-amerika.standardBusiness",
+          "value": 135000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-amerika.promoEconomy",
+          "value": 50000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-amerika.promoBusiness",
+          "value": 75000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-amerika.standardEconomy",
+          "value": 65000,
+          "unit": "integer"
+        },
+        {
+          "key": "guney-amerika.standardBusiness",
+          "value": 145000,
+          "unit": "integer"
+        },
+        {
+          "key": "okyanusya.promoEconomy",
+          "value": 50000,
+          "unit": "integer"
+        },
+        {
+          "key": "okyanusya.promoBusiness",
+          "value": 100000,
+          "unit": "integer"
+        },
+        {
+          "key": "okyanusya.standardEconomy",
+          "value": 80000,
+          "unit": "integer"
+        },
+        {
+          "key": "okyanusya.standardBusiness",
+          "value": 180000,
+          "unit": "integer"
+        }
+      ]
+    },
+    {
+      "id": "TK",
+      "url": "https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/turkish-airlines/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "Mileage Accrual Table: altı sınıf grubu, iç hat sabitleri ve dış hat oran/minimumları.",
+      "fields": [
+        {
+          "key": "economy-flex.classes",
+          "value": "Y,B",
+          "unit": "classes"
+        },
+        {
+          "key": "economy-flex.domestic",
+          "value": 600,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-flex.classic.rate",
+          "value": "125%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-flex.classic.minimum",
+          "value": 1250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-flex.classicPlus.rate",
+          "value": "125%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-flex.classicPlus.minimum",
+          "value": 1250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-flex.elite.rate",
+          "value": "125%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-flex.elite.minimum",
+          "value": 1250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-flex.elitePlus.rate",
+          "value": "125%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-flex.elitePlus.minimum",
+          "value": 1250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-standard.classes",
+          "value": "M,H,S,E,Q,A,O",
+          "unit": "classes"
+        },
+        {
+          "key": "economy-standard.domestic",
+          "value": 600,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-standard.classic.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-standard.classic.minimum",
+          "value": 1000,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-standard.classicPlus.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-standard.classicPlus.minimum",
+          "value": 1000,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-standard.elite.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-standard.elite.minimum",
+          "value": 1000,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-standard.elitePlus.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-standard.elitePlus.minimum",
+          "value": 1000,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-discount.classes",
+          "value": "T,L,V,G",
+          "unit": "classes"
+        },
+        {
+          "key": "economy-discount.domestic",
+          "value": 300,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-discount.classic.rate",
+          "value": "50%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-discount.classic.minimum",
+          "value": 500,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-discount.classicPlus.rate",
+          "value": "50%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-discount.classicPlus.minimum",
+          "value": 500,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-discount.elite.rate",
+          "value": "50%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-discount.elite.minimum",
+          "value": 500,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-discount.elitePlus.rate",
+          "value": "50%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-discount.elitePlus.minimum",
+          "value": 500,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-low.classes",
+          "value": "W,P,F,U",
+          "unit": "classes"
+        },
+        {
+          "key": "economy-low.domestic",
+          "value": 150,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-low.classic.rate",
+          "value": "25%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-low.classic.minimum",
+          "value": 250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-low.classicPlus.rate",
+          "value": "25%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-low.classicPlus.minimum",
+          "value": 250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-low.elite.rate",
+          "value": "25%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-low.elite.minimum",
+          "value": 250,
+          "unit": "integer"
+        },
+        {
+          "key": "economy-low.elitePlus.rate",
+          "value": "25%",
+          "unit": "rate"
+        },
+        {
+          "key": "economy-low.elitePlus.minimum",
+          "value": 250,
+          "unit": "integer"
+        },
+        {
+          "key": "business-flex.classes",
+          "value": "C,D",
+          "unit": "classes"
+        },
+        {
+          "key": "business-flex.domestic",
+          "value": 1250,
+          "unit": "integer"
+        },
+        {
+          "key": "business-flex.classic.rate",
+          "value": "150%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-flex.classic.minimum",
+          "value": 1500,
+          "unit": "integer"
+        },
+        {
+          "key": "business-flex.classicPlus.rate",
+          "value": "175%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-flex.classicPlus.minimum",
+          "value": 1750,
+          "unit": "integer"
+        },
+        {
+          "key": "business-flex.elite.rate",
+          "value": "175%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-flex.elite.minimum",
+          "value": 1750,
+          "unit": "integer"
+        },
+        {
+          "key": "business-flex.elitePlus.rate",
+          "value": "175%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-flex.elitePlus.minimum",
+          "value": 1750,
+          "unit": "integer"
+        },
+        {
+          "key": "business-standard.classes",
+          "value": "K,J,Z",
+          "unit": "classes"
+        },
+        {
+          "key": "business-standard.domestic",
+          "value": 1000,
+          "unit": "integer"
+        },
+        {
+          "key": "business-standard.classic.rate",
+          "value": "135%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-standard.classic.minimum",
+          "value": 1350,
+          "unit": "integer"
+        },
+        {
+          "key": "business-standard.classicPlus.rate",
+          "value": "160%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-standard.classicPlus.minimum",
+          "value": 1600,
+          "unit": "integer"
+        },
+        {
+          "key": "business-standard.elite.rate",
+          "value": "160%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-standard.elite.minimum",
+          "value": 1600,
+          "unit": "integer"
+        },
+        {
+          "key": "business-standard.elitePlus.rate",
+          "value": "160%",
+          "unit": "rate"
+        },
+        {
+          "key": "business-standard.elitePlus.minimum",
+          "value": 1600,
+          "unit": "integer"
+        }
+      ]
+    },
+    {
+      "id": "status",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/uyelik-statuleri/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "Statü yükseltme, Classic Plus uçuş alternatifi, iki koruma dönemi ve Elite ikamet dipnotu.",
+      "fields": [
+        {
+          "key": "classicPlus.promotion.miles",
+          "value": 25000,
+          "unit": "integer"
+        },
+        {
+          "key": "classicPlus.promotion.flights",
+          "value": 40,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.Turkey.year1.miles",
+          "value": 17000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.Turkey.year1.flights",
+          "value": 30,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.Turkey.year2.miles",
+          "value": 35000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.Turkey.year2.flights",
+          "value": 60,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.abroad.year1.miles",
+          "value": 17000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.abroad.year1.flights",
+          "value": 30,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.abroad.year2.miles",
+          "value": 35000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.abroad.year2.flights",
+          "value": 60,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.promotion.miles",
+          "value": 40000,
+          "unit": "integer"
+        },
+        {
+          "key": "elite.promotion.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.Turkey.year1.miles",
+          "value": 30000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.Turkey.year1.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.Turkey.year2.miles",
+          "value": 45000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.Turkey.year2.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.abroad.year1.miles",
+          "value": 25000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.abroad.year1.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.abroad.year2.miles",
+          "value": 37500,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.abroad.year2.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.promotion.miles",
+          "value": 80000,
+          "unit": "integer"
+        },
+        {
+          "key": "elitePlus.promotion.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.Turkey.year1.miles",
+          "value": 40000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.Turkey.year1.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.Turkey.year2.miles",
+          "value": 60000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.Turkey.year2.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.abroad.year1.miles",
+          "value": 40000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.abroad.year1.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.abroad.year2.miles",
+          "value": 60000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.abroad.year2.flights",
+          "value": null,
+          "unit": "nullableInteger"
+        }
+      ]
+    },
+    {
+      "id": "LH",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/program-ortaklari/havayolu/lufthansa/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "Lufthansa sınıf, oran, minimum ve kazanım dışı sınıflar. Web kopyası geçen hafta taranmış.",
+      "fields": [
+        {
+          "key": "excludedClasses",
+          "value": "O,I,R,X,K,L,P",
+          "unit": "classes"
+        },
+        {
+          "key": "row0.classes",
+          "value": "A,F",
+          "unit": "classes"
+        },
+        {
+          "key": "row0.rate",
+          "value": "200%",
+          "unit": "rate"
+        },
+        {
+          "key": "row0.minimum",
+          "value": 1600,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row1.classes",
+          "value": "C,D,J",
+          "unit": "classes"
+        },
+        {
+          "key": "row1.rate",
+          "value": "150%",
+          "unit": "rate"
+        },
+        {
+          "key": "row1.minimum",
+          "value": 1200,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row2.classes",
+          "value": "Z",
+          "unit": "classes"
+        },
+        {
+          "key": "row2.rate",
+          "value": "135%",
+          "unit": "rate"
+        },
+        {
+          "key": "row2.minimum",
+          "value": 1000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row3.classes",
+          "value": "G,E",
+          "unit": "classes"
+        },
+        {
+          "key": "row3.rate",
+          "value": "125%",
+          "unit": "rate"
+        },
+        {
+          "key": "row3.minimum",
+          "value": 1000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row4.classes",
+          "value": "N",
+          "unit": "classes"
+        },
+        {
+          "key": "row4.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "row4.minimum",
+          "value": 800,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row5.classes",
+          "value": "B,Y",
+          "unit": "classes"
+        },
+        {
+          "key": "row5.rate",
+          "value": "125%",
+          "unit": "rate"
+        },
+        {
+          "key": "row5.minimum",
+          "value": 1000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row6.classes",
+          "value": "H,M,U",
+          "unit": "classes"
+        },
+        {
+          "key": "row6.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "row6.minimum",
+          "value": 800,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row7.classes",
+          "value": "Q,S,W,V",
+          "unit": "classes"
+        },
+        {
+          "key": "row7.rate",
+          "value": "50%",
+          "unit": "rate"
+        },
+        {
+          "key": "row7.minimum",
+          "value": 400,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row8.classes",
+          "value": "T",
+          "unit": "classes"
+        },
+        {
+          "key": "row8.rate",
+          "value": "25%",
+          "unit": "rate"
+        },
+        {
+          "key": "row8.minimum",
+          "value": 200,
+          "unit": "nullableInteger"
+        }
+      ]
+    },
+    {
+      "id": "UA",
+      "url": "https://www.turkishairlines.com/en-int/miles-and-smiles/program-partners/airlines/united-airlines/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "United sınıf, oran ve kazanım dışı sınıflar. Minimum sütunu yayımlanmıyor.",
+      "fields": [
+        {
+          "key": "excludedClasses",
+          "value": "F,X,I",
+          "unit": "classes"
+        },
+        {
+          "key": "row0.classes",
+          "value": "J,C,D",
+          "unit": "classes"
+        },
+        {
+          "key": "row0.rate",
+          "value": "150%",
+          "unit": "rate"
+        },
+        {
+          "key": "row0.minimum",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row1.classes",
+          "value": "Z,P",
+          "unit": "classes"
+        },
+        {
+          "key": "row1.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "row1.minimum",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row2.classes",
+          "value": "O,A,R",
+          "unit": "classes"
+        },
+        {
+          "key": "row2.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "row2.minimum",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row3.classes",
+          "value": "Y,B,M,E,U,H",
+          "unit": "classes"
+        },
+        {
+          "key": "row3.rate",
+          "value": "100%",
+          "unit": "rate"
+        },
+        {
+          "key": "row3.minimum",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row4.classes",
+          "value": "Q,V,W,S,T,L",
+          "unit": "classes"
+        },
+        {
+          "key": "row4.rate",
+          "value": "75%",
+          "unit": "rate"
+        },
+        {
+          "key": "row4.minimum",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "row5.classes",
+          "value": "K,G,N",
+          "unit": "classes"
+        },
+        {
+          "key": "row5.rate",
+          "value": "50%",
+          "unit": "rate"
+        },
+        {
+          "key": "row5.minimum",
+          "value": null,
+          "unit": "nullableInteger"
+        }
+      ]
+    },
+    {
+      "id": "statusPurchase",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-uygulamalari/statu-mil-satin-alma/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "Statü Mil Satın Alma: blok, fiyat, ek 12 ay limiti ve statü bazlı açık sınırları.",
+      "fields": [
+        {
+          "key": "blockMiles",
+          "value": 1000,
+          "unit": "integer"
+        },
+        {
+          "key": "pricePerBlockUSD",
+          "value": 70,
+          "unit": "integer"
+        },
+        {
+          "key": "publishedAdditional12MonthLimit",
+          "value": 10000,
+          "unit": "integer"
+        },
+        {
+          "key": "classic.promotion",
+          "value": 5000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classic.renewal",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.promotion",
+          "value": 10000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "classicPlus.renewal",
+          "value": 5000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.promotion",
+          "value": 10000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elite.renewal",
+          "value": 10000,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.promotion",
+          "value": null,
+          "unit": "nullableInteger"
+        },
+        {
+          "key": "elitePlus.renewal",
+          "value": 10000,
+          "unit": "nullableInteger"
+        }
+      ]
+    },
+    {
+      "id": "statusConversion",
+      "url": "https://www.turkishairlines.com/tr-tr/miles-and-smiles/mil-uygulamalari/mil-donusturme/",
+      "status": "available",
+      "method": "manual-transcription",
+      "locator": "Mil dönüştürme: 5:1 oran ve bir yıllık üst sınır.",
+      "fields": [
+        {
+          "key": "spendableMilesDebitedPerStatusMile",
+          "value": 5,
+          "unit": "integer"
+        },
+        {
+          "key": "maxStatusMilesInPrevious12Months",
+          "value": 40000,
+          "unit": "integer"
+        }
+      ]
+    }
+  ]
+}
